@@ -42,6 +42,7 @@ export default function Filtros({ filtro, setFiltro }: Props) {
                     })} 
                     key={opcao.id} 
                     onClick={() => selecionarFiltro(opcao)}
+                    onBlur={() => selecionarFiltro(opcao)}
                 >
                     {opcao.label}
                 </button>
