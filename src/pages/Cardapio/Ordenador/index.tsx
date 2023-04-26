@@ -10,7 +10,7 @@ interface Props {
 
 const opcoes = [
     {
-        "nome": "(Selecione uma categoria)",
+        "nome": "(Selecione um filtro)",
         "value": ""
     },
     {
