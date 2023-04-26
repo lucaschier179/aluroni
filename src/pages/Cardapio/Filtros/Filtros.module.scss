@@ -1,5 +1,10 @@
 @import "styles/variaveis";
 
+$massas: #d73b3b;
+$carnes: #30201e;
+$combos: #e6c864;
+$veganos: #80aa40;
+
 .filtros {
     display: flex;
     gap: 24px;
@@ -17,13 +22,22 @@
         justify-content: center;
         width: 150px;
         outline: none;
-        &--ativo {
-            background-color: $blue;
+        &__massas {
+            background-color: $massas;
             color: white;
-    }
+        }
+        &__carnes {
+            background-color: $carnes;
+            color: white;
+        }
+        &__combos {
+            background-color: $combos;
+        }
+        &__veganos {
+            background-color: $veganos;
+        }
         &:hover {
-            background-color: $blue;
-            color: white;
+            border-bottom: 3px solid black;
             cursor: pointer;
         }
     }
