@@ -17,7 +17,7 @@ export default function Cardapio() {
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
-                    A Casa do Código e da Massa
+          A Casa do Código e da Massa
         </div>
       </header>
       <section className={styles.cardapio}>
