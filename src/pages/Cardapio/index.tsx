@@ -1,10 +1,10 @@
-import styles from "./Cardapio.module.scss";
-import { ReactComponent as Logo } from "assets/logo.svg";
-import Buscador from "./Buscador";
+import Menu from "components/Menu";
 import { useState } from "react";
+import Buscador from "./Buscador";
+import styles from "./Cardapio.module.scss";
 import Filtros from "./Filtros";
-import Ordenador, { OpcoesOrdenador } from "./Ordenador";
 import Itens from "./Itens";
+import Ordenador, { OpcoesOrdenador } from "./Ordenador";
 
 export default function Cardapio() {
   const [busca, setBusca] = useState("");
@@ -12,9 +12,7 @@ export default function Cardapio() {
   const [ordenador, setOrdenador] = useState<OpcoesOrdenador>("");
   return (
     <main>
-      <nav className={styles.menu}>
-        <Logo />
-      </nav>
+      <Menu />
       <header className={styles.header}>
         <div className={styles.header__text}>
           A Casa do Código e da Massa
