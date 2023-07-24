@@ -3,13 +3,14 @@ import cardapio from "data/cardapio.json";
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Prato.module.scss";
+import NotFound from "pages/NotFound";
 
 export default function Prato() {
   const { id } = useParams();
   const navigate = useNavigate();
   const prato = cardapio.find(item => item.id === Number(id));
   if (!prato) {
-    return "";
+    return <NotFound />;
   }
 
   return (
