@@ -10,7 +10,7 @@ export default function PaginaPadrao() {
           A Casa do Código e da Massa
         </div>
       </header>
-      <div className={stylesTema.titulo}>
+      <div className={stylesTema.container}>
         <Outlet />
       </div>
     </>
