@@ -1,15 +1,21 @@
 import classNames from "classnames";
 import cardapio from "data/cardapio.json";
 import { BiArrowBack } from "react-icons/bi";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./Prato.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function Prato() {
-  const { state } = useLocation();
-  const { prato } = state as { prato: typeof cardapio[0] };
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const prato = cardapio.find(item => item.id === Number(id));
+  if (!prato) {
+    return "";
+  }
+
   return (
     <>
-      <button className={styles.voltar}>
+      <button className={styles.voltar} onClick={() => navigate(-1)}>
         <BiArrowBack size={32} />
         {"Voltar"}
       </button>
