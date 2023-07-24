@@ -1,11 +1,11 @@
-import { useState } from "react";
-import styles from "./Ordenador.module.scss";
 import classNames from "classnames";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import { useState } from "react";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import styles from "./Ordenador.module.scss";
 
 interface IOrdenador {
-    ordenador: OpcoesOrdenador;
-    setOrdenador: React.Dispatch<React.SetStateAction<OpcoesOrdenador>>;
+  ordenador: OpcoesOrdenador;
+  setOrdenador: React.Dispatch<React.SetStateAction<OpcoesOrdenador>>;
 }
 
 export type OpcoesOrdenador = "" | "porcao" | "qtd_pessoas" | "preco";
@@ -37,7 +37,7 @@ export default function Ordenador({ ordenador, setOrdenador }: IOrdenador) {
       className={classNames({
         [styles.ordenador]: true,
         [styles["ordenador--ativo"]]: ordenador !== "",
-      })} 
+      })}
       onClick={() => setAberto(!aberto)}
       onBlur={() => setAberto(false)}
     >
