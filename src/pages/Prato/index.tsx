@@ -1,9 +1,10 @@
+import PaginaPadrao from "components/PaginaPadrao";
 import TagsPrato from "components/TagsPrato";
 import cardapio from "data/cardapio.json";
+import NotFound from "pages/NotFound";
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Prato.module.scss";
-import NotFound from "pages/NotFound";
 
 export default function Prato() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export default function Prato() {
   }
 
   return (
-    <>
+    <PaginaPadrao>
       <button className={styles.voltar} onClick={() => navigate(-1)}>
         <BiArrowBack size={32} />
         {"Voltar"}
@@ -33,6 +34,6 @@ export default function Prato() {
           <TagsPrato {...prato} />
         </div>
       </section>
-    </>
+    </PaginaPadrao>
   );
 }
